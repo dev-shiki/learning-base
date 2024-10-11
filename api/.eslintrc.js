@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   root: true,
   env: {
     node: true
@@ -9,7 +9,6 @@ module.exports = {
   ],
   extends: [
     'eslint:recommended',
-    // 'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
   ],
   rules: {
@@ -91,5 +90,12 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-var-requires': 'off'
-  }
+  },
+  ignorePatterns: [
+    ".vscode",
+    "node_modules",
+    "dist",
+    "cert",
+    "get_env.js"
+  ]
 }
